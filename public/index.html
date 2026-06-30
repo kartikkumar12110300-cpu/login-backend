@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="panel intro">
+      <p class="eyebrow">Simple Auth Frontend</p>
+      <h1>Login server UI</h1>
+      <p>Create an account, sign in, and test your protected dashboard route from one small page.</p>
+
+      <div class="status-card">
+        <span class="status-dot" id="tokenDot"></span>
+        <div>
+          <strong id="authState">Not logged in</strong>
+          <p id="tokenPreview">No token saved yet.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel forms">
+      <div class="tabs" role="tablist" aria-label="Auth forms">
+        <button class="tab active" id="loginTab" type="button">Login</button>
+        <button class="tab" id="registerTab" type="button">Register</button>
+      </div>
+
+      <form class="auth-form active" id="loginForm">
+        <h2>Welcome back</h2>
+        <label for="loginEmail">Email</label>
+        <input id="loginEmail" name="email" type="email" placeholder="you@example.com" required>
+
+        <label for="loginPassword">Password</label>
+        <input id="loginPassword" name="password" type="password" placeholder="Enter password" required>
+
+        <button type="submit">Login</button>
+      </form>
+
+      <form class="auth-form" id="registerForm">
+        <h2>Create account</h2>
+        <label for="registerEmail">Email</label>
+        <input id="registerEmail" name="email" type="email" placeholder="you@example.com" required>
+
+        <label for="registerPassword">Password</label>
+        <input id="registerPassword" name="password" type="password" placeholder="Choose password" required>
+
+        <button type="submit">Register</button>
+      </form>
+
+      <div class="actions">
+        <button class="secondary" id="homeBtn" type="button">Test Home</button>
+        <button class="secondary" id="dashboardBtn" type="button">Test Dashboard</button>
+        <button class="ghost" id="logoutBtn" type="button">Logout</button>
+      </div>
+
+      <pre id="resultBox">Response will appear here.</pre>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
