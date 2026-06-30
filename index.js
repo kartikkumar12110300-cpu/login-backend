@@ -4,7 +4,6 @@ const express= require('express')
 const app = express()
 const routes = require('./Routes/UserRoutes');
 const cors = require('cors')
-const path = require('path')
 const PORT = process.env.PORT || 8888
 
 app.use(cors({
@@ -12,7 +11,6 @@ app.use(cors({
 }))
 
 app.use(express.json())  //body-parser
-app.use(express.static(path.join(__dirname, 'public')))
 // app.use(express.urlencoded({extended:true}));
 app.use('/pages',routes)
 
