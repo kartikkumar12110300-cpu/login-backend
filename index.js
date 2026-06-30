@@ -12,6 +12,11 @@ app.use(cors({
 
 app.use(express.json())  //body-parser
 // app.use(express.urlencoded({extended:true}));
+
+app.get('/', (req, res) => {
+    res.send({msg:'Backend API is running'})
+})
+
 app.use('/pages',routes)
 
 app.listen(PORT,()=>{
